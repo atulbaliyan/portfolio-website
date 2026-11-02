@@ -1,2 +1,3 @@
+import Hero from './components/Hero';
 import Navigation from './components/Navigation';
-export default function App(){return <><a className="skip" href="#main">Skip to content</a><Navigation/><main id="main"><h1 className="wrap">Atul Baliyan</h1></main></>}
+export default function App(){return <><a className="skip" href="#main">Skip to content</a><Navigation/><main id="main"><Hero/></main></>}
