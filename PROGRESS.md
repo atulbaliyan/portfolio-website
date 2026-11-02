@@ -4,7 +4,7 @@
 - [x] Scaffold React, TypeScript, Vite and Tailwind
 - [x] Navigation
 - [x] Hero and assets
-- [ ] Featured work
+- [x] Featured work
 - [ ] About, toolbox and experience
 - [ ] Contact and footer
 - [ ] SEO, deployment and verification
