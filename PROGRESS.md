@@ -17,3 +17,5 @@
 - All three project repositories verified public. WallpaperHub Play Store listing resolves. Equation solver README confirms Streamlit.
 - Original résumé copied intact; portrait is the supplied 82 KB WebP.
 - Native browser viewport resizing is unavailable; tablet layout has CSS coverage but no dedicated viewport screenshot.
+
+- First CI run exposed a Node 24/npm clean-install incompatibility with Tailwind optional dependencies. CI now matches the tested Node 22/npm 10 toolchain.

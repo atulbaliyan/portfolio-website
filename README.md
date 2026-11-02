@@ -4,7 +4,7 @@ A static, responsive React Native developer portfolio with React, TypeScript, Vi
 
 ## Development
 
-Use Node 24 LTS (Node 22 also supported).
+Use Node 22 LTS with npm 10, matching the tested CI toolchain.
 
 ```sh
 npm ci
