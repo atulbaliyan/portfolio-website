@@ -1,4 +1,157 @@
-import { ArrowUpRight, Github, Play, FileText, ScanLine, Search, Heart } from 'lucide-react';
-import { links, projects } from '../data/portfolio';
-import Reveal from './Reveal';
-export default function Work(){return <section id="work" className="section"><div className="wrap"><div className="eyebrow">Selected work <span className="section-number">02 /</span></div><div className="section-heading"><h2>Ideas, made real<span className="cyan">.</span></h2><p>A few things I’ve built, refined, and put out into the world.</p></div><Reveal className="featured-project"><div className="project-copy"><span className="project-category"><span className="live-dot"/> {projects[0].category}</span><h3>WallpaperHub<span className="cyan">↗</span></h3><p>{projects[0].description}</p><div className="chips">{projects[0].stack.map(s=><span className="chip" key={s}>{s}</span>)}</div><div className="project-actions"><a className="button primary" href={links.play} target="_blank" rel="noopener noreferrer"><Play size={16}/> Get it on Google Play</a><a className="text-link" href={projects[0].source} target="_blank" rel="noopener noreferrer"><Github size={15}/> Source code <ArrowUpRight size={14}/></a></div><div className="project-note">DESIGNED. DEVELOPED. DEPLOYED.</div></div><div className="app-stage"><div className="stage-orbit"/><div className="phone" aria-label="Illustrative WallpaperHub interface"><div className="phone-island"/><div className="phone-status">9:41 <span>▴ ▰</span></div><div className="phone-title">Discover<span>✳</span></div><div className="phone-subtitle">A little inspiration for your screen.</div><div className="phone-search"><Search size={10}/> Find your next wallpaper</div><div className="phone-tabs"><span>For you</span> Nature &nbsp; Abstract</div><div className="wallpaper-grid"><div className="wallpaper mountain"/><div className="wallpaper abstract"/><div className="wallpaper desert"/><div className="wallpaper sea"/></div><div className="phone-bottom"><span>⌂</span><Search size={13}/><Heart size={13}/></div></div><span className="mockup-label">INTERFACE STUDY · ILLUSTRATIVE PREVIEW</span></div></Reveal><div className="supporting-projects">{projects.slice(1).map((project,i)=><Reveal className="project-card" key={project.name}><div className={`mini-preview preview-${i}`} aria-hidden="true">{i===0?<><div className="document"><FileText size={29}/><b>Meeting notes</b><span/><span/><span/><div className="document-tag">PDF · OFFLINE READY</div></div><div className="scan-icon"><ScanLine size={25}/></div></>:<div className="equation-preview"><span className="handwriting">2x + 6 = 14</span><span className="equation-arrow">↓ &nbsp; RECOGNIZE → SOLVE</span><span className="solution">x = <b>4</b><span>✓</span></span></div>}</div><div className="supporting-copy"><span className="project-category">{project.category}</span><h3>{project.name}</h3><p>{project.description}</p><div className="chips">{project.stack.map(s=><span className="chip" key={s}>{s}</span>)}</div><a className="text-link" href={project.source} target="_blank" rel="noopener noreferrer">Explore source code <ArrowUpRight size={16}/></a></div></Reveal>)}</div></div></section>}
+import {
+  ArrowUpRight,
+  Github,
+  Play,
+  FileText,
+  ScanLine,
+  Search,
+  Heart,
+} from "lucide-react";
+import { links, projects } from "../data/portfolio";
+import Reveal from "./Reveal";
+export default function Work() {
+  return (
+    <section id="work" className="section">
+      <div className="wrap">
+        <div className="eyebrow">
+          Selected work <span className="section-number">02 /</span>
+        </div>
+        <div className="section-heading">
+          <h2>
+            Ideas, made real<span className="cyan">.</span>
+          </h2>
+          <p>A few things I’ve built, refined, and put out into the world.</p>
+        </div>
+        <Reveal className="featured-project">
+          <div className="project-copy">
+            <span className="project-category">
+              <span className="live-dot" /> {projects[0].category}
+            </span>
+            <h3>
+              WallpaperHub<span className="cyan">↗</span>
+            </h3>
+            <p>{projects[0].description}</p>
+            <div className="chips">
+              {projects[0].stack.map((s) => (
+                <span className="chip" key={s}>
+                  {s}
+                </span>
+              ))}
+            </div>
+            <div className="project-actions">
+              <a
+                className="button primary"
+                href={links.play}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Play size={16} /> Get it on Google Play
+              </a>
+              <a
+                className="text-link"
+                href={projects[0].source}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={15} /> Source code <ArrowUpRight size={14} />
+              </a>
+            </div>
+            <div className="project-note">DESIGNED. DEVELOPED. DEPLOYED.</div>
+          </div>
+          <div className="app-stage">
+            <div className="stage-orbit" />
+            <div
+              className="phone"
+              aria-label="Illustrative WallpaperHub interface"
+            >
+              <div className="phone-island" />
+              <div className="phone-status">
+                9:41 <span>▴ ▰</span>
+              </div>
+              <div className="phone-title">
+                Discover<span>✳</span>
+              </div>
+              <div className="phone-subtitle">
+                A little inspiration for your screen.
+              </div>
+              <div className="phone-search">
+                <Search size={10} /> Find your next wallpaper
+              </div>
+              <div className="phone-tabs">
+                <span>For you</span> Nature &nbsp; Abstract
+              </div>
+              <div className="wallpaper-grid">
+                <div className="wallpaper mountain" />
+                <div className="wallpaper abstract" />
+                <div className="wallpaper desert" />
+                <div className="wallpaper sea" />
+              </div>
+              <div className="phone-bottom">
+                <span>⌂</span>
+                <Search size={13} />
+                <Heart size={13} />
+              </div>
+            </div>
+            <span className="mockup-label">
+              INTERFACE STUDY · ILLUSTRATIVE PREVIEW
+            </span>
+          </div>
+        </Reveal>
+        <div className="supporting-projects">
+          {projects.slice(1).map((project, i) => (
+            <Reveal className="project-card" key={project.name}>
+              <div className={`mini-preview preview-${i}`} aria-hidden="true">
+                {i === 0 ? (
+                  <>
+                    <div className="document">
+                      <FileText size={29} />
+                      <b>Meeting notes</b>
+                      <span />
+                      <span />
+                      <span />
+                      <div className="document-tag">PDF · OFFLINE READY</div>
+                    </div>
+                    <div className="scan-icon">
+                      <ScanLine size={25} />
+                    </div>
+                  </>
+                ) : (
+                  <div className="equation-preview">
+                    <span className="handwriting">2x + 6 = 14</span>
+                    <span className="equation-arrow">
+                      ↓ &nbsp; RECOGNIZE → SOLVE
+                    </span>
+                    <span className="solution">
+                      x = <b>4</b>
+                      <span>✓</span>
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="supporting-copy">
+                <span className="project-category">{project.category}</span>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className="chips">
+                  {project.stack.map((s) => (
+                    <span className="chip" key={s}>
+                      {s}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  className="text-link"
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore source code <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
