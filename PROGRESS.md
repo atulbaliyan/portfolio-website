@@ -5,6 +5,6 @@
 - [x] Navigation
 - [x] Hero and assets
 - [x] Featured work
-- [ ] About, toolbox and experience
+- [x] About, toolbox and experience
 - [ ] Contact and footer
 - [ ] SEO, deployment and verification
