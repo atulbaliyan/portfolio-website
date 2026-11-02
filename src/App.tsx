@@ -1,1 +1,2 @@
-export default function App(){return <main><h1>Atul Baliyan</h1></main>}
+import Navigation from './components/Navigation';
+export default function App(){return <><a className="skip" href="#main">Skip to content</a><Navigation/><main id="main"><h1 className="wrap">Atul Baliyan</h1></main></>}

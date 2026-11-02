@@ -2,7 +2,7 @@
 
 - [x] Inspect empty repository and supplied assets
 - [x] Scaffold React, TypeScript, Vite and Tailwind
-- [ ] Navigation
+- [x] Navigation
 - [ ] Hero and assets
 - [ ] Featured work
 - [ ] About, toolbox and experience
